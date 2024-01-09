@@ -1,0 +1,26 @@
+-- Published to github by v3lvics
+-- https://github.com/v3lvics/roblox-st-tween-pack-git
+--[[
+░█▀▀▀░░▀░░▀█▀░█░░░░█░▒█░█▀▀▄░░░░█▀▄░▄▀▀▄░█▀▄▀█░░░▄░░░▄░█▀▀█░█░░▄░░░▄░░▀░░█▀▄░█▀▀
+░█░▀▄░░█▀░░█░░█▀▀█░█░▒█░█▀▀▄░▄▄░█░░░█░░█░█░▀░█░░░░█▄█░░░▒▀▄░█░░░█▄█░░░█▀░█░░░▀▀▄
+░▀▀▀▀░▀▀▀░░▀░░▀░░▀░░▀▀▀░▀▀▀▀░▀▀░▀▀▀░░▀▀░░▀░░▒▀░░░░░▀░░░█▄▄█░▀▀░░░▀░░░▀▀▀░▀▀▀░▀▀▀
+--]]
+
+-- lua
+local tweenservice= game:GetService("TweenService")
+local tweeninfo = TweenInfo.new(3, Enum.EasingStyle.Sine, Enum.EasingDirection.InOut)
+-- how long?, How to move?, Smooth Start/End
+-- Using CFrame to move.
+
+-- Locations
+local finish = {workspace.EndingPart.CFrame}
+local start = {workspace.StartingPart.CFrame} -- Change to your parts.
+
+
+-- Creating the tween.
+local MyTweenStart = tweenservice:Create(workspace.YourPart, tweeninfo, finish)
+-- Delete this if you dont want the return tween.
+local MyTweenFinished = tweenservice:Create(workspace.YourPart, tweeninfo, start)
+
+-- Your function etc.
+-- Use this to start the tween - MyTweenStart:Play
